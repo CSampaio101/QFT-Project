@@ -9,7 +9,8 @@ def omega(k, m):
   return np.sqrt(np.power(np.linalg.norm(k), 2) + np.power(m, 2))
 
 L, m = 10, 1
-#Note: We label the arbitrary mode as N for the sake of simplicity. The small "n" will be used to denote excitation (n=0 is the ground state)
+
+
 def k(n, m, l):
   return np.pi / L * np.array([n,m,l])
 
@@ -51,7 +52,7 @@ def prob_ampl(n, N, M, L, plot = False):
 
 
 
-
+#Note: We label the arbitrary mode as (N,M,L) for the sake of simplicity. The small "n" will be used to denote excitation (n=0 is the ground state)
 def box(n, N, M, L, plot = False):
   y_min, y_max = 0, prob_ampl(n, N, M, L, plot)
   x_min, x_max = -2, 2
